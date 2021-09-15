@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integral numérica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Integración numérica</h1>
+    <div class="form">
+        <div>
+            <label for="function">Función a integrar</label>
+            <input type="text" class="function">
+        </div>
+        <div>
+            <label for="limiteA">Límite a</label>
+            <input type="number" class="a">
+        </div>
+        <div>
+            <label for="limiteB">Límite b</label>
+            <input type="number" class="b">
+        </div>
+        <div>
+            <label for="">Número de particiones (n)</label>
+            <input type="number" class="n">
+        </div>
+        <button>Calcular</button>
+    </div>
+    <div class="table-container">
+        <div>
+            <table class="table">
+            </table>
+            <p class="result-suma"></p>
+            <p class="result"></p>
+        </div>
+        <div>
+            <table class="table">
+            </table>
+            <p class="result-suma"></p>
+            <p class="result"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
