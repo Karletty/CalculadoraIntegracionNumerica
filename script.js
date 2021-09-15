@@ -50,6 +50,7 @@ const fillTable = tableNumber => {
 }
 const createTable = () => {
     for (let i = 0; i < tableContainer.length; i++) {
+        sumkFxi = [0,0];
         tableContainer[i].innerHTML = '';
         result[i].innerHTML = '';
         resultSuma[i].innerHTML = '';
