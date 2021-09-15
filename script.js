@@ -2,11 +2,11 @@ const btn = document.querySelector("button");
 const tableContainer = document.getElementsByClassName("table");
 const resultSuma = document.getElementsByClassName("result-suma");
 const resultSumaTxt = ["La suma del trapecio es ", "La suma de Simpson es "];
+const anchoGeneralTxt = document.querySelector(".ancho-general");
 const result = document.getElementsByClassName("result");
-const resultTxt = "La integral es:"
+const resultTxt = "La integral es: ";
 const formula = ["(b-a)/(2*n)", "(b-a)/(3*n)"];
 let fx, a, b, n, anchoGeneral, xi, fxi, k, kFxi = [], x, sumkFxi = [0, 0];
-
 const evalueFunction = () => {
     return eval(fx);
 }
@@ -16,6 +16,7 @@ const declare = () => {
     b = parseFloat(document.querySelector(".b").value);
     n = parseFloat(document.querySelector(".n").value);
     anchoGeneral = (b - a) / n;
+    anchoGeneralTxt.textContent = `El ancho general es de ${anchoGeneral}`;
     createTable();
 }
 const getKValue = (tableNumber, i) => {
@@ -42,7 +43,7 @@ const fillTable = tableNumber => {
             <td>${k}</td>
             <td>${Math.trunc(kFxi[i] * 100000) / 100000}</td>
         </tr>`
-        xi = xi + anchoGeneral;
+        xi = parseFloat((xi + anchoGeneral).toFixed(4))
     }
     resultSuma[tableNumber].innerHTML += `${resultSumaTxt[tableNumber]}${Math.trunc(sumkFxi[tableNumber] * 10000) / 10000}`
     let formulaUsar = formula[tableNumber]

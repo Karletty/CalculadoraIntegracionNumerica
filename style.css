@@ -12,6 +12,9 @@ body{
     padding: 50px;
     color: #ffffff;
 }
+.ancho-general{
+    margin-bottom: 10px;
+}
 .form div{
     display: flex;
     flex-direction: column;
