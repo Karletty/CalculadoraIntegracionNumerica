@@ -16,27 +16,72 @@
 <body>
     <section class="main">
         <h1>Integración numérica</h1>
-        <div class="flex-column"></div>
-        <div class="form">
-            <div>
-                <label for="function">Función a integrar</label>
-                <input type="text" class="function input">
+        <div class="flex-column">
+            <div class="form">
+                <div>
+                    <label for="function">Función a integrar</label>
+                    <input type="text" class="function input">
+                </div>
+                <div class="wrap">
+                    <div>
+                        <label for="limiteA">Límite a</label>
+                        <input type="number" class="a input">
+                    </div>
+                    <div>
+                        <label for="limiteB">Límite b</label>
+                        <input type="number" class="b input">
+                    </div>
+                    <div>
+                        <label for="">Particiones n</label>
+                        <input type="number" class="n input" min="3">
+                    </div>
+                </div>
+                <button class="btn">Calcular</button>
             </div>
-            <div class="wrap">
-                <div>
-                    <label for="limiteA">Límite a</label>
-                    <input type="number" class="a input">
-                </div>
-                <div>
-                    <label for="limiteB">Límite b</label>
-                    <input type="number" class="b input">
-                </div>
-                <div>
-                    <label for="">Particiones n</label>
-                    <input type="number" class="n input" min="3">
-                </div>
+            <div class="formulas-table">
+                <table class="help-table">
+                    <thead>
+                        <th>Fórmula</th>
+                        <th>Significado</th>
+                    </thead>
+                    <tr>
+                        <td>Math.sqrt()</td>
+                        <td>Raíz cuadrada</td>
+                    </tr>
+                    <tr>
+                        <td>Math.pow(base,exponente)</td>
+                        <td>Potencia base elevado a exponente</td>
+                    </tr>
+                    <tr>
+                        <td>Math.sin()</td>
+                        <td>Seno</td>
+                    </tr>
+                    <tr>
+                        <td>Math.cos()</td>
+                        <td>Coseno</td>
+                    </tr>
+                    <tr>
+                        <td>Math.tan()</td>
+                        <td>Tangente</td>
+                    </tr>
+                    <tr>
+                        <td>Math.asin()</td>
+                        <td>Seno inverso</td>
+                    </tr>
+                    <tr>
+                        <td>Math.acos()</td>
+                        <td>Coseno inverso</td>
+                    </tr>
+                    <tr>
+                        <td>Math.atan()</td>
+                        <td>Tangente inversa</td>
+                    </tr>
+                    <tr>
+                        <td>Math.log()</td>
+                        <td>Logaritmo natural</td>
+                    </tr>
+                </table>
             </div>
-            <button class="btn">Calcular</button>
         </div>
         <p class="ancho-general"></p>
         <div class="table-container">
