@@ -8,45 +8,56 @@
     <title>Integral numérica</title>
     <link rel="shortcut icon" href="integral.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&amp;display=swap"
+        rel="stylesheet" preload="">
+    <script src="https://kit.fontawesome.com/b711723059.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <h1>Integración numérica</h1>
-    <div class="form">
-        <div>
-            <label for="function">Función a integrar</label>
-            <input type="text" class="function">
+    <section class="main">
+        <h1>Integración numérica</h1>
+        <div class="flex-column"></div>
+        <div class="form">
+            <div>
+                <label for="function">Función a integrar</label>
+                <input type="text" class="function input">
+            </div>
+            <div class="wrap">
+                <div>
+                    <label for="limiteA">Límite a</label>
+                    <input type="number" class="a input">
+                </div>
+                <div>
+                    <label for="limiteB">Límite b</label>
+                    <input type="number" class="b input">
+                </div>
+                <div>
+                    <label for="">Particiones n</label>
+                    <input type="number" class="n input" min="3">
+                </div>
+            </div>
+            <button class="btn">Calcular</button>
         </div>
-        <div>
-            <label for="limiteA">Límite a</label>
-            <input type="number" class="a">
+        <p class="ancho-general"></p>
+        <div class="table-container">
+            <div>
+                <table class="table">
+                </table>
+                <p class="result-suma"></p>
+                <p class="result"></p>
+                <p class="error"></p>
+            </div>
+            <div>
+                <table class="table">
+                </table>
+                <p class="result-suma"></p>
+                <p class="result"></p>
+            </div>
         </div>
-        <div>
-            <label for="limiteB">Límite b</label>
-            <input type="number" class="b">
-        </div>
-        <div>
-            <label for="">Número de particiones (n)</label>
-            <input type="number" class="n">
-        </div>
-        <button>Calcular</button>
-    </div>
-    <p class="ancho-general"></p>
-    <div class="table-container">
-        <div>
-            <table class="table">
-            </table>
-            <p class="result-suma"></p>
-            <p class="result"></p>
-            <p class="error"></p>
-        </div>
-        <div>
-            <table class="table">
-            </table>
-            <p class="result-suma"></p>
-            <p class="result"></p>
-        </div>
-    </div>
+    </section>
+    <footer class="footer">
+        <p>Hecho por Karletty Elías Pérez 2021</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 

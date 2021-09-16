@@ -5,6 +5,7 @@ const resultSumaTxt = ["La suma del trapecio es ", "La suma de Simpson es "];
 const anchoGeneralTxt = document.querySelector(".ancho-general");
 const result = document.getElementsByClassName("result");
 const resultTxt = "La integral es: ";
+const reglaTxt = ["REGLA DEL TRAPECIO", "REGLA DE SIMPSON"]
 const formula = ["(b-a)/(2*n)", "(b-a)/(3*n)"];
 let fx, a, b, n, anchoGeneral, xi, fxi, k, kFxi = [], x, sumkFxi = [0, 0];
 const evalueFunction = () => {
@@ -58,12 +59,15 @@ const createTable = () => {
         if(i ===0 || (i === 1 && (n % 2) === 0)){
             tableContainer[i].innerHTML += `
                 <thead>
+                    <th colspan="5">${reglaTxt[i]}</th>
+                </thead>
+                <tr>
                     <th>i</th>
                     <th>xi</th>
                     <th>f(xi)</th>
                     <th>k</th>
                     <th>k*f(xi)</th>
-                </thead>`;
+                </tr>`;
             fillTable(i)
         }
     }
