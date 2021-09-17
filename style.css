@@ -119,6 +119,7 @@ div.wrap {
   color: #ffffff;
   font-weight: bold;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .footer {
   background-color: #0e7ff3;

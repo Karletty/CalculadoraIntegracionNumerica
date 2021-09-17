@@ -16,9 +16,13 @@ const declare = () => {
     a = parseFloat(document.querySelector(".a").value);
     b = parseFloat(document.querySelector(".b").value);
     n = parseFloat(document.querySelector(".n").value);
-    anchoGeneral = (b - a) / n;
-    anchoGeneralTxt.textContent = `El ancho general es de ${anchoGeneral}`;
-    createTable();
+    if(n>=3){
+        anchoGeneral = (b - a) / n;
+        createTable();
+    }
+    else{
+        anchoGeneralTxt.textContent = `Intente con más particiones`
+    }
 }
 const getKValue = (tableNumber, i) => {
     if (tableNumber === 0) {
@@ -33,6 +37,7 @@ const fillTable = tableNumber => {
     for (let i = 0; i <= n; i++) {
         x = xi;
         fxi = Math.trunc(evalueFunction() * 10000) / 10000;
+        anchoGeneralTxt.textContent = `El ancho general es de ${Math.trunc(anchoGeneral*10000)/10000}`;
         k = getKValue(tableNumber, i);
         kFxi[i] = fxi * k;
         sumkFxi[tableNumber] += parseFloat(kFxi[i].toFixed(4));
@@ -52,11 +57,7 @@ const fillTable = tableNumber => {
 }
 const createTable = () => {
     for (let i = 0; i < tableContainer.length; i++) {
-        sumkFxi = [0,0];
-        tableContainer[i].innerHTML = '';
-        result[i].innerHTML = '';
-        resultSuma[i].innerHTML = '';
-        if(i ===0 || (i === 1 && (n % 2) === 0)){
+        if (i === 0 || (i === 1 && (n % 2) === 0)) {
             tableContainer[i].innerHTML += `
                 <thead>
                     <th colspan="5">${reglaTxt[i]}</th>
@@ -72,6 +73,15 @@ const createTable = () => {
         }
     }
 }
+const clear = () => {
+    sumkFxi = [0, 0];
+    for (let j = 0; j < tableContainer.length; j++) {
+        tableContainer[j].innerHTML = '';
+        result[j].innerHTML = '';
+        resultSuma[j].innerHTML = '';
+    }
+}
 btn.addEventListener("click", e = () => {
+    clear()
     declare();
 });
