@@ -8,9 +8,8 @@
     <title>Integral numérica</title>
     <link rel="shortcut icon" href="integral.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&amp;display=swap"
-        rel="stylesheet" preload="">
     <script src="https://kit.fontawesome.com/b711723059.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -19,102 +18,66 @@
         <div class="flex-column">
             <div class="form">
                 <div>
-                    <label for="function">Función a integrar</label>
+                    <label>Función a integrar</label>
                     <input type="text" class="function input">
                 </div>
                 <div class="wrap">
                     <div>
-                        <label for="limiteA">Límite a</label>
+                        <label>Límite a</label>
                         <input type="number" class="a input">
                     </div>
                     <div>
-                        <label for="limiteB">Límite b</label>
+                        <label>Límite b</label>
                         <input type="number" class="b input">
                     </div>
+                </div>
+                <div class="wrap">
                     <div>
-                        <label for="">Particiones n</label>
+                        <div id="radio-label">
+                            <input type="radio" class="radio-n" value="particiones">
+                            <label>Particiones n</label>
+                        </div>
                         <input type="number" class="n input" min="3">
+                    </div>
+                    <div>
+                        <div id="radio-label">
+                            <input type="radio" class="radio-e" value="error" min="0">
+                            <label>Porcentaje error</label>
+                        </div>
+                        <input type="number" class="e input">
                     </div>
                 </div>
                 <button class="btn">Calcular</button>
             </div>
-            <div class="formulas-table">
-                <table class="help-table">
-                    <thead>
-                        <th>Fórmula</th>
-                        <th>Significado</th>
-                    </thead>
-                    <tr>
-                        <td>Math.sqrt(valor)</td>
-                        <td>Raíz cuadrada del valor</td>
-                    </tr>
-                    <tr>
-                        <td>Math.pow(base,exponente)</td>
-                        <td>Potencia base elevado a exponente</td>
-                    </tr>
-                    <tr>
-                        <td>Math.sin(valor)</td>
-                        <td>Seno del valor</td>
-                    </tr>
-                    <tr>
-                        <td>Math.cos(valor)</td>
-                        <td>Coseno del valor</td>
-                    </tr>
-                    <tr>
-                        <td>Math.tan(valor)</td>
-                        <td>Tangente del valor</td>
-                    </tr>
-                    <tr>
-                        <td>Math.asin(valor)</td>
-                        <td>Seno inverso del valor</td>
-                    </tr>
-                    <tr>
-                        <td>Math.acos(valor)</td>
-                        <td>Coseno inverso del valor</td>
-                    </tr>
-                    <tr>
-                        <td>Math.atan(valor)</td>
-                        <td>Tangente inversa del valor</td>
-                    </tr>
-                    <tr>
-                        <td>Math.log(valor)</td>
-                        <td>Logaritmo natural del valor</td>
-                    </tr>
-                    <tr>
-                        <td>Math.exp(exponente)</td>
-                        <td>e elevado al exponente</td>
-                    </tr>
-                    <tr>
-                        <td>Math.E</td>
-                        <td>Número de Euler</td>
-                    </tr>
-                    <tr>
-                        <td>Math.PI</td>
-                        <td>Número pi</td>
-                    </tr>
-                </table>
+            <div class="info">
+                <table class="derivadas table"></table>
+                <p class="error-txt"></p>
+                <p class="ancho-general"></p>
             </div>
         </div>
-        <p class="ancho-general"></p>
         <div class="table-container">
             <div>
-                <table class="table">
+                <table class="table table-suma">
                 </table>
                 <p class="result-suma"></p>
                 <p class="result"></p>
+                <p class="val-errores"></p>
                 <p class="error"></p>
             </div>
             <div>
-                <table class="table">
+                <table class="table table-suma">
                 </table>
                 <p class="result-suma"></p>
                 <p class="result"></p>
+                <p class="val-errores"></p>
+                <p class="error"></p>
             </div>
         </div>
     </section>
     <footer class="footer">
         <p>Hecho por Karletty Elías Pérez 2021</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.5/math.min.js"></script>
     <script src="script.js"></script>
 </body>
 
